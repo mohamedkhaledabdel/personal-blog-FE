@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import ReactMarkdown from 'react-markdown';
+
 class NavBar extends Component {
     navBarData = {
         techBlogs: "Tech Blogs"
     }
     state = {
+        text: "# Markdown \n" +
+        "## This is the my 1st markdown \n"
     }
     render() {
         return (
@@ -18,6 +22,7 @@ class NavBar extends Component {
                         </div>
                     </div>
                 </nav>
+            <ReactMarkdown>{this.state.text}</ReactMarkdown>
             </div>
         );
     }
